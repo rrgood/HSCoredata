@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2BA695E21B6182C600E224FB /* HSCoredata.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA695E11B6182C600E224FB /* HSCoredata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BA695EE1B61849000E224FB /* HSCoredata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA695ED1B61849000E224FB /* HSCoredata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B7272EC1BACE46C00FD9CF0 /* CoreDataConduit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConduit.swift; sourceTree = "<group>"; };
 		2BA695DE1B6182C600E224FB /* HSCoredata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HSCoredata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA695E11B6182C600E224FB /* HSCoredata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSCoredata.h; sourceTree = "<group>"; };
 		2BA695E31B6182C600E224FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA695ED1B61849000E224FB /* HSCoredata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSCoredata.swift; sourceTree = "<group>"; };
+		2BFD64C61BA8CBE800E2C228 /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +50,11 @@
 		2BA695E01B6182C600E224FB /* HSCoredata */ = {
 			isa = PBXGroup;
 			children = (
+				2BFD64C61BA8CBE800E2C228 /* CoreDataModel.swift */,
 				2BA695E11B6182C600E224FB /* HSCoredata.h */,
 				2BA695E31B6182C600E224FB /* Info.plist */,
+				2BA695ED1B61849000E224FB /* HSCoredata.swift */,
+				2B7272EC1BACE46C00FD9CF0 /* CoreDataConduit.swift */,
 			);
 			path = HSCoredata;
 			sourceTree = "<group>";
@@ -90,11 +97,13 @@
 		2BA695D51B6182C600E224FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = HannibalStudios;
 				TargetAttributes = {
 					2BA695DD1B6182C600E224FB = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 75EE5XM6WU;
 					};
 				};
 			};
@@ -130,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA695EE1B61849000E224FB /* HSCoredata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +167,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -175,7 +186,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -205,6 +216,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -228,26 +240,35 @@
 		2BA695E71B6182C600E224FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HSCoredata/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hannibalstudios.HSCoredata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2BA695E81B6182C600E224FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HSCoredata/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -276,6 +297,7 @@
 				2BA695E81B6182C600E224FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
